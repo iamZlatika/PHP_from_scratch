@@ -1,42 +1,30 @@
 <?php
-// 1 Создать 3 переменные :
-//  1.1 Переменная содержит название города
-$city = "м.Запоріжжя";
+$myGoods = ["Котики", "Енотики", "Песики", "Хорюшки", "Свиночки", "Хомочки"]
+?>
+<!DOCTYPE html>
+<html lang="en">
 
-//  1.2 Переменная содержит название улицы
-$street = "вул.Європейська";
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-//  1.3 Переменная содержит номер дома
-$house = 20;
+<body>
 
-// 2 Вывод переменных из п.1 с помощью echo
-echo "$city, $street, $house<br>";
+    <ul class="list-group">
+        <li class="list-group-item"><?php echo  $myGoods[0]?></li>
+        <li class="list-group-item"><?php echo  $myGoods[1]?></li>
+        <li class="list-group-item"><?php echo  $myGoods[2]?></li>
+        <li class="list-group-item"><?php echo  $myGoods[3]?></li>
+        <li class="list-group-item"><?php echo  $myGoods[4]?></li>
+        <li class="list-group-item"><?php echo  $myGoods[5]?></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 
-// 3 Вывод переменных из п.1 с помощью print
-print $city . ', ' . $street . ', ' . $house .  '<br>';
-
-// 4 **Вывести переменные в одну строку с помощью echo, без использования кавычек и запятых вообще. Можно использовать только 1 echo
-define('ADRESS', "$city, $street, $house<br>");
-echo ADRESS;
-
-// 5 Создать переменную содержащую ваш возраст
-$age = 33; 
-
-// 6 Вычислить кол-во месяцев с момента вашего рождения
-$birthday = new DateTime('1989-03-08');
-$now = new DateTime();
-$interval = $now->diff($birthday);
-
-$months_interval = $interval->y*12 + $interval->m;
-
-// 7 Вычислить кол-во дней которые прошли с момента вашего рождения, можете учитывать високосные дни
-$days_interval = $interval->days;
-
-// 8 *Удалить переменные которые были созданы, с помощью функции которую сами найдете.
-unset($city, $street, $house, $age, $birthday, $now, $interval, $months_interval, $days_interval);
-
-
-
-
-
-
+</html>
